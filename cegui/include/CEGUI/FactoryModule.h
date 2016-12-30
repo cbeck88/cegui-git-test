@@ -65,7 +65,7 @@ protected:
 };
 
 #if defined(CEGUI_STATIC) && defined(CEGUI_BUILD_STATIC_FACTORY_MODULE)
-    extern CEGUI::FactoryModule& getWindowFactoryModule();
+    extern "C" CEGUI::FactoryModule& getWindowFactoryModule();
 #endif
 
 } // End of  CEGUI namespace section
