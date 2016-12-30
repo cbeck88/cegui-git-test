@@ -64,6 +64,10 @@ protected:
     FactoryRegistry d_registry;
 };
 
+#if defined(CEGUI_STATIC) && defined(CEGUI_BUILD_STATIC_FACTORY_MODULE)
+    extern CEGUI::FactoryModule& getWindowFactoryModule();
+#endif
+
 } // End of  CEGUI namespace section
 
 #if defined(_MSC_VER)

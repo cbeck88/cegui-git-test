@@ -47,6 +47,11 @@ if (NOT CEGUI_HAS_MINIZIP_RESOURCE_PROVIDER)
     list (REMOVE_ITEM CORE_SOURCE_FILES MinizipResourceProvider.cpp)
 endif()
 
+if (CEGUI_BUILD_STATIC_CONFIGURATION)
+    list (REMOVE_ITEM CORE_SOURCE_FILES DynamicModule.cpp)
+endif()
+
+
 if (WIN32)
     list (REMOVE_ITEM CORE_SOURCE_FILES IconvStringTranscoder.cpp)
 else()
